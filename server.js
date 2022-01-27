@@ -15,6 +15,6 @@ io.on('test',(socket) => {
   console.log(">>>>>>>>")
   console.log("a user connected");
 });
-server.listen(9997, () => {
-  console.log("listening on *:9997");
+server.listen(process.env.PORT || 9997, () => {
+  console.log(`listening on *: ${process.env.PORT}`);
 });
