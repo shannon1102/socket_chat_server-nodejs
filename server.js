@@ -7,7 +7,7 @@ const io = new Server(server);
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
-io.on("connection", (socket) => {
+io.on("connect", (socket) => {
   console.log(">>>>>>>>")
   console.log("a user connected");
 });
