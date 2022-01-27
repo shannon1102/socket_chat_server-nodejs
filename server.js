@@ -1,5 +1,9 @@
 const app = require('express')()
 const httpServer = require("http").createServer(app);
+
+app.get('/', function (req, res) {
+  res.send('GET request to the homepage')
+})
 const socketIO = require("socket.io")(httpServer);
 socketIO.on("connection", socket => {
     console.log(socket);
