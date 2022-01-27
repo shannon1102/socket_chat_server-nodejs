@@ -8,6 +8,11 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 io.on("connection", (socket) => {
+  console.log(">>>>>>>>")
+  console.log("a user connected");
+});
+io.on('test',(socket) => {
+  console.log(">>>>>>>>")
   console.log("a user connected");
 });
 server.listen(9997, () => {
