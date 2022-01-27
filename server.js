@@ -34,7 +34,7 @@ socketIO.on("connection", socket => {
   });
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 9997;
 httpServer.listen(port, function (err) {
     if (err) console.log(err);
     console.log('Listening on port', port);
